@@ -1,0 +1,26 @@
+.service-icon-box-two{
+	@apply relative bg-white z-1 p-7.5 outline-[3px] outline-soft-beige outline-double;
+}
+.service-media{
+	@apply relative overflow-hidden;
+}
+.service-icon-box-two:after{
+	@apply absolute left-0 top-0 w-3/5 h-1/2 bg-[url(../images/background/dark-dott-pattern.webp)] -z-1;
+}
+.service-icon-box-two .service-media:before {
+	@apply content-[''] absolute bg-black/[0.06] inset-0 scale-x-0 origin-right transition-transform duration-500 ease-in-out z-2;
+}
+.service-icon-box-two:hover .service-media:before{
+	@apply scale-x-100 origin-left;
+}
+.all_services ul li.active a {
+    @apply text-primary;
+}
+.all_services ul li.active i{
+    @apply !text-primary;
+}
+@media (max-width: 767px) {
+.service-icon-box-two .service-media img {
+	@apply h-80 w-full object-cover object-center;
+}
+}
